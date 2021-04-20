@@ -14,14 +14,14 @@
 -- 로컬디스크의 oraclexe/data 폴더에 mydb.dbf라는 파일을 생성하고
 -- mydb라는 이름으로 사용하겠다
 -- 데이터가 있던 없던간에 기본 크기를 10MByte로 설정해 달라
--- 만약 데이터가 추가되는 동안에 공간이 부족하면 자동으로 10KByte씩 증가하여 준비해 달랑
+-- 만약 데이터가 추가되는 동안에 공간이 부족하면 자동으로 10KByte씩 증가하여 준비해 달라
 CREATE TABLESPACE mydb
 DATAFILE 'C:/oraclexe/data/mydb.dbf'
 SIZE 10M AUTOEXTEND ON NEXT 10K;
 
 -- SQL Developer에서 명령 실행하기
 -- SQL 코드를 입력하고 명령줄 내에서 Ctrl + Enter를 입력
---  가. SQL Developer는 localhost:1521에서 기다리고 있는 Oracle DBMS 서버에게 명령을 전달한다===
+--  가. SQL Developer는 localhost:1521에서 기다리고 있는 Oracle DBMS 서버에게 명령을 전달한다
 --  나. Oracle DBNS 서버는 명령을 수신한 후 문법 검사를 하고 명령을 실행한 후 결과를 다시 SQL Developer에게 return
 --  다. SQL Developer는 Console에 결과를 보여준다
 
@@ -59,5 +59,5 @@ DROP USER user1 CASCADE;
 CREATE USER user1 IDENTIFIED BY 1234
 DEFAULT TABLESPACE mydb;
 
--- 오라클에서는 새로운 사용자를 생성한 직후에는 아무런 권한도  부여되지 않은 상태이다.
+-- 오라클에서는 새로운 사용자를 생성한 직후에는 아무런 권한도 부여되지 않은 상태이다.
 -- 심지어 접속(login) 자체가 되지 않는다.
