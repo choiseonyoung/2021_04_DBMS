@@ -15,4 +15,7 @@ CASCADE CONSTRAINTS; -- 옵션
 CREATE USER iouser IDENTIFIED BY iouser
 DEFAULT TABLESPACE iolistdb;
 
+-- 사용자에게 권한부여
+GRANT DBA TO iouser;
+
 DROP USER iouser CASCADE;
