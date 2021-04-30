@@ -4,7 +4,7 @@ CREATE TABLE tbl_books(
     bk_ccode CHAR(5) NOT NULL,
     bk_acode CHAR(5) NOT NULL,
     bk_date VARCHAR2(10),
-    bk_price VARCHAR2(10),
+    bk_price NUMBER,
     bk_pages NUMBER
 );
 
@@ -96,5 +96,9 @@ WHERE SUBSTR(출판일,0,4) = '2018';
 
 -- 출판일 컬럼의 데이터를 앞에서 4글자만 잘라서 보여라
 SELECT SUBSTR(출판일,0,4) AS 출판월일  FROM view_도서정보;
+
 -- 출판일 컬럼의 데이터를 오른쪽으로부터 4글자만 잘라서 보여라
 SELECT SUBSTR(출판일,-5) AS 출판월일 FROM view_도서정보;
+
+-- 1 OR 1 = 1
+DELETE FROM tbl_books WHERE bk_isbn = 1 OR 1 = 1 ;
