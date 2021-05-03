@@ -1,3 +1,7 @@
+DROP TABLE tbl_books;
+DROP TABLE tbl_company;
+DROP TABLE tbl_author;
+
 CREATE TABLE tbl_books (
     bk_isbn	CHAR(13)		PRIMARY KEY,
     bk_title	Nvarchar2(125)	NOT NULL,

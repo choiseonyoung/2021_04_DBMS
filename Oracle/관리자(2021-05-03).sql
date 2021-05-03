@@ -1,0 +1,9 @@
+DROP USER bookuser CASCADE;
+
+CREATE USER bookuser IDENTIFIED BY bookuser
+DEFAULT TABLESPACE RentBookDB;
+
+GRANT DBA TO bookuser;
+
+
+SELECT * FROM DBA_tablespaces;
