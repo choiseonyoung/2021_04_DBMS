@@ -3,7 +3,7 @@ SELECT * FROM VIEW_성적정보;
 
 -- Sub Query
 -- SQL 명령문 내에 또다른 SQL 명령문을 포함하는 코드
--- JOIN 대신 사영하는 코드이고
+-- JOIN 대신 사용하는 코드이고
 -- Sub Query의 99% 정도는 JOIN을 사용하여 대체할 수 있다
 SELECT sc_num AS 학번,
     (

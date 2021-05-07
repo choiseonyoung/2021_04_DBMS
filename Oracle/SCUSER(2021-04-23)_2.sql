@@ -76,7 +76,7 @@ WHERE 총점 BETWEEN 150 AND 200;
 -- 총점이 150 이상 200 이하인 데이터 중에
 -- 국어점수가 70 이상인 데이터
 SELECT * FROM view_score
-WHERE 총점 BETWEEN 150 AND 200 AND 국어 >= 80;
+WHERE 총점 BETWEEN 150 AND 200 AND 국어 >= 70;
 
 -- 전체 데이터의 총점을 구하여 보여라
 -- project 항목에 사용하는 함수
