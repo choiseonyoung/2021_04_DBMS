@@ -2,8 +2,8 @@ CREATE TABLE tbl_todo (
     td_seq	NUMBER		PRIMARY KEY,
     td_date	VARCHAR2(10)	NOT NULL,
     td_time	VARCHAR2(10)	NOT NULL,
-    td_todo	nVARCHAR2(125)	NOT NULL,
-    td_place	nVARCHAR2(125)
+    td_todo	VARCHAR2(125)	NOT NULL,
+    td_place	VARCHAR2(125)
 );
 DROP TABLE tbl_todo;
 
@@ -28,13 +28,8 @@ CREATE VIEW view_할일목록 AS (
 );
 DROP VIEW view_할일목록;
 
-SELECT * FROM tbl_todo;
+SELECT * FROM view_할일목록
+DESC td_date;
 
 SELECT * FROM tbl_todo
 WHERE td_seq = 1;
-
-UPDATE tbl_todo SET td_date = '2021-05-25',td_time = '11:50',td_todo='밥',td_place='' WHERE td_seq = 1;
-
-commit;
-
-
