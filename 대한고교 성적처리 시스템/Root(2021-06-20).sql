@@ -9,6 +9,7 @@ CREATE TABLE tbl_student (
 	st_tel	VARCHAR(15)	NOT NULL,
 	st_addr	VARCHAR(125)
 );
+DROP TABLE tbl_student;
 SELECT * FROM tbl_student;
 
 CREATE TABLE tbl_score (
