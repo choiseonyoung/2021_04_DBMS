@@ -12,7 +12,7 @@ CREATE TABLE tbl_student (
 );
 
 INSERT INTO tbl_student(st_num, st_name, st_dept, st_grade, st_tel)
-VALUES('2021001','홍길동','컴공과',3,'010-111-1234');
+VALUES('20210001','홍길동','컴공과',3,'010-111-1234');
 
 CREATE TABLE tbl_score (
 	sc_seq	BIGINT	AUTO_INCREMENT	PRIMARY KEY,
@@ -35,8 +35,9 @@ CREATE TABLE tbl_subject (
 	sb_name	VARCHAR(20)	NOT NULL,
 	sb_prof	VARCHAR(20)
 );
-
 DROP TABLE tbl_subject;
+
+DROP TABLE tbl_subjtbl_scoreect;
 INSERT INTO tbl_subject(sb_code, sb_name)
 VALUES('S001','데이터구조');
 INSERT INTO tbl_subject(sb_code, sb_name)
@@ -49,3 +50,5 @@ INSERT INTO tbl_subject(sb_code, sb_name)
 VALUES('S005','알고리즘');
 
 SELECT * FROM tbl_subject;
+SELECT * FROM tbl_student;
+SELECT * FROM tbl_score;
