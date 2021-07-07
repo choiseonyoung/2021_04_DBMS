@@ -32,3 +32,32 @@ VALUES
 -- 그 과정에서 AUTO_INCREMENT 컬럼이 변화가 있으면
 -- 그 값을 알려주는 함수
 SELECT LIST_INSERT_ID();
+
+-- INSERT를 수행할 때
+-- AUTO_INCREMENT로 설정된 컬럼에 0 또는 null 또는 ''등을 설정하면
+-- AUTO_INCREMENT가 작동된다
+INSERT INTO tbl_gallery
+( g_seq, g_writer, g_date, g_time, g_subject, g_content )
+VALUE (0, 'choiseonyoung', '2021', '00:00', '제목', '내용');
+
+SELECT * FROM tbl_files;
+SELECT * FROM tbl_gallery;
+
+-- EQ JOIN
+-- 카티션 곱
+-- 두개의 table을 JOIN하여
+-- table1 개수 * table2 개수 만큼 list 출력
+SELECT * FROM tbl_gallery G, tbl_files F
+	WHERE G.g_seq = F.file_gseq
+    AND G.g_seq = 1;
+
+CREATE VIEW view_갤러리 AS (
+SELECT G.g_seq AS g_seq, G.g_writer AS g_writer, G.g_date AS g_date, G.g_time AS g_time, G.g_subject AS g_subject, G.g_content AS g_content, G.g_image AS g_image,
+		F.file_seq AS f_seq, F.file_original AS f_original, F.file_upname AS f_upname
+FROM tbl_gallery G, tbl_files F
+WHERE G.g_seq = F.file_gseq
+);
+
+DESC view_갤러리;
+
+SELECT * FROM view_갤러리;
