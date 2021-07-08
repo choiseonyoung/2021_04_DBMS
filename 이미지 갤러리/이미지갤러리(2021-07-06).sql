@@ -61,3 +61,11 @@ WHERE G.g_seq = F.file_gseq
 DESC view_갤러리;
 
 SELECT * FROM view_갤러리;
+
+USE mylibs;
+SHOW TABLES;
+DESC tbl_member;
+
+SELECT * FROM tbl_member;
+
+DROP TABLE tbl_member;
