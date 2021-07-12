@@ -100,3 +100,6 @@ SELECT * FROM tbl_gallery;
 
 UPDATE tbl_gallery SET g_image = null
 WHERE g_seq = 14;
+
+SELECT * FROM tbl_gallery;
+SELECT COUNT(*) FROM tbl_gallery;
